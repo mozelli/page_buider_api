@@ -17,7 +17,9 @@ class Project:
     project_type: Mapped[str]
     project_category: Mapped[str]
     project_description: Mapped[str]
-    created_at: Mapped[datetime] = mapped_column(init=False, server_default=func.now())
+    created_at: Mapped[datetime] = mapped_column(
+        init=False, server_default=func.now()
+    )
     updated_at: Mapped[datetime] = mapped_column(
         init=False, server_default=func.now(), onupdate=func.now()
     )
